@@ -1,5 +1,5 @@
 require('dotenv').config()  // carregar as variáveis de ambiente
-const conn = require('./db/conn.js') 
+const conn = require('./db/conn') 
 const { 
     Usuario, 
     Pedido, 
