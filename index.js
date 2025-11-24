@@ -1,5 +1,5 @@
 require('dotenv').config()
-const conn = require('./src/db/conn')
+const conn = require('./db/conn')
 
 const PORT = process.env.PORT || 3000
 const HOST = process.env.HOST || '0.0.0.0' // 0.0.0.0 é seguro e aceita conexões em PaaS
@@ -10,7 +10,7 @@ async function startServer() {
   try {
 
 
-    
+
     if (!isProduction) {
       // Em desenvolvimento: sincroniza alterando o esquema para facilitar dev
       await conn.sync({ alter: true })
